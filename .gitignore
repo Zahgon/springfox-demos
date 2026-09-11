@@ -8,3 +8,8 @@ gradle-app.setting
 !gradle-wrapper.jar
 .java-version
 .idea
+truth.md
+instruction.md
+fix.patch
+test.patch
+golden.patch

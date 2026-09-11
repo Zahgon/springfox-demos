@@ -1,22 +1,23 @@
 ## boot-static-docs
 
 __Experimental__
-- A spring boot app with a default swagger2 configuration
-- A test which uses `springfox-staticdocs` and [swagger2markup](https://github.com/RobWin/swagger2markup) to generate 
- Asciidoc source from the applications JSO API.
-- The [asciidoctor-gradle-plugin](https://github.com/asciidoctor/asciidoctor-gradle-plugin) to generate pdf and html asciidoctor docs.
- 
- 
-To generate the asciidoctor documentation run:
- 
+- An application with a default swagger2 configuration
+- A test which uses `internal/staticdocs` to generate Asciidoc source from the
+  application's JSON API.
+
+To generate the asciidoc documentation run:
+
 ```bash
-./gradlew boot-static-docs:asciidoctor
+go test ./boot-static-docs -run TestStaticDocs
 ```
 
-### Runnng the app
+Rendering the generated Asciidoc to PDF and HTML was done by the
+asciidoctor-gradle-plugin and has no Go counterpart; it is out of scope.
+
+### Running the app
 ```bash
-./gradlew boot-static-docs:bootRun 
+go run ./boot-static-docs
 ```
 
 http://localhost:8080/v2/api-docs
-http://localhost:8080/swagger-ui.html
+http://localhost:8080/swagger-ui/index.html

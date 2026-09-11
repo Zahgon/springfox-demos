@@ -1,9 +1,9 @@
 ## spring-xml-swagger
-An xml configured spring web mvc app with Swagger2 and Swagger UI
+The app whose Spring configuration was written in XML, with Swagger2 and Swagger UI
 
 ### Running
 ```
-./gradlew spring-xml-swagger:appRun
+go run ./spring-xml-swagger
 ```
 
 ### Working Api Endpoint
@@ -14,4 +14,4 @@ http://localhost:8080/spring-xml-swagger/api/user/login?username=a&password=b
 http://localhost:8080/spring-xml-swagger/v2/api-docs
 
 ### Swagger UI
-http://localhost:8080/spring-xml-swagger/swagger-ui.html
+http://localhost:8080/spring-xml-swagger/swagger-ui/index.html
